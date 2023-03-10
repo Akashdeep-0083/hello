@@ -1,0 +1,21 @@
+#include<stdio.h>
+void main(){
+    int a,b,c;
+    int dividend,divisor,remainder;
+    scanf("%d %d",&a,&b);
+    if (a<b)
+    {
+        dividend=a;
+        divisor=b;
+    }else{
+        dividend=b;
+        divisor=a;
+    }
+    while (divisor)
+    {
+        remainder=dividend%divisor;
+        dividend=divisor;
+        divisor=remainder;
+    }
+    printf("GCD IS %d",dividend);
+}
